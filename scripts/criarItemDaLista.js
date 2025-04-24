@@ -1,3 +1,5 @@
+import gerarDiaDaSemana from "./gerarDiaDaSemana.js";
+
 const inputItem = document.getElementById( 'input-item' );
 let contador = 0;
 
@@ -19,13 +21,7 @@ export function criarItemLista() {
     const nomeLista = document.createElement( 'p' );
     nomeLista.innerText = inputItem.value;
 
-    const diaDaSemana = new Date().toLocaleDateString('pt-BR', {weekday: 'long'});
-    const data = new Date().toLocaleDateString('pt-BR');
-    const hora = new Date().toLocaleTimeString('pt-BR', {
-        hour: 'numeric',
-        minute: 'numeric'
-    });
-    let horarioCompleto = `${diaDaSemana} (${data}) às ${hora}`;
+    const horarioCompleto = gerarDiaDaSemana();
     
     const dataLista = document.createElement( 'p' );
     dataLista.classList.add( 'texto-data' );

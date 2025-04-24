@@ -1,7 +1,6 @@
 const listaVazia = document.querySelector('.mensagem-lista-vazia');     
-const listaCompras = document.getElementById( 'lista-de-compras' );
 
-export function verificarListaVazia() {
+export default function verificarListaVazia(listaCompras) {
     const itensDaLista = listaCompras.querySelectorAll('li');
 
     if(itensDaLista.length === 0) {
