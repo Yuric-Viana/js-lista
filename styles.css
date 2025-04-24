@@ -105,8 +105,10 @@ ul {
     list-style-type: none;
 }
 
-.input-checkbox {
-    display: none;
+.input-checkbox:checked {
+    height: 2em;
+    width: 2em;
+    background-color: #C2373F;
 }
 
 .checkbox-customizado {
@@ -150,3 +152,4 @@ ul {
 .container-lista {
     width: 100%;
 }
+

@@ -1,7 +1,16 @@
-const inputItem = document.getElementById( 'input-item');
-const item = document.getElementById( 'lista-item' );
+import { criarItemLista } from "./scripts/criarItemDaLista.js";
+import { verificarListaVazia } from "./scripts/listaVazia.js";
 
-const salvarInfo = document.getElementById( 'adicionar-item' );
-salvarInfo.addEventListener( 'click', (evento) => {
+const salvarItem = document.getElementById( 'adicionar-item' );
+const listaCompras = document.getElementById( 'lista-de-compras' );
+
+salvarItem.addEventListener( 'click', (evento) => {
     evento.preventDefault();
+
+    const criarLista = criarItemLista();
+    
+    listaCompras.appendChild( criarLista );
+    verificarListaVazia();
 })
+
+verificarListaVazia();
